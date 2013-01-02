@@ -1,0 +1,14 @@
+/**
+ * Main container width
+*/
+body {
+  background: #7e2219;
+  margin: 0;
+}
+#header {
+  width: 960px;
+  height: 164px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url('img/header-bg.jpg') no-repeat;
+}

@@ -1,0 +1,22 @@
+@bgcolor: #7e2219;
+/**
+ * Main container width
+*/
+@mainWidth: 960px;
+body {
+	background: @bgcolor;
+	margin: 0;
+}
+
+.centered (@width, @height) {
+	width: @width;
+	height: @height;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header {
+	@headerHeight: 164px;
+	.centered( @mainWidth, @headerHeight );
+	background: url('img/header-bg.jpg') no-repeat;
+}
