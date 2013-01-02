@@ -5,6 +5,20 @@ body {
   background: #7e2219;
   margin: 0;
 }
+/**
+ * Mixin for centering stuff
+ */
+.hey {
+  color: #fff;
+  /*jude */
+
+}
+/**
+ * This is a comment dur
+ */
+#file {
+  color: green;
+}
 #header {
   height: 164px;
   width: 960px;
