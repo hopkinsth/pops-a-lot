@@ -8,15 +8,32 @@ body {
 	margin: 0;
 }
 
-.centered (@width, @height) {
+/**
+ * Mixin for centering stuff
+ */
+.centered (@width) {
 	width: @width;
-	height: @height;
 	margin-left: auto;
 	margin-right: auto;
 }
+.hey {
+	color: #fff;/*jude */
+}
 
 #header {
-	@headerHeight: 164px;
-	.centered( @mainWidth, @headerHeight );
-	background: url('img/header-bg.jpg') no-repeat;
+	height: 164px;
+	.centered( @mainWidth );
+	background: url('img/header-sprite.png') 0 0 no-repeat;
+	position: relative;
+
+	#the-logo {
+		position: relative;
+		top: 20px;
+
+		height: 122px;
+		.centered(267px);
+		display: block;
+		outline: none;
+		background: url('img/header-sprite.png') 0 -164px no-repeat;
+	}
 }

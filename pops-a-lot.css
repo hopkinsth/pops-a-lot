@@ -6,9 +6,21 @@ body {
   margin: 0;
 }
 #header {
-  width: 960px;
   height: 164px;
+  width: 960px;
   margin-left: auto;
   margin-right: auto;
-  background: url('img/header-bg.jpg') no-repeat;
+  background: url('img/header-sprite.png') 0 0 no-repeat;
+  position: relative;
+}
+#header #the-logo {
+  position: relative;
+  top: 20px;
+  height: 122px;
+  width: 267px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  outline: none;
+  background: url('img/header-sprite.png') 0 -164px no-repeat;
 }
