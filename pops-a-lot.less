@@ -27,15 +27,29 @@ body {
 	#the-logo {
 		position: relative;
 		top: 20px;
-
 		height: 122px;
 		.centered(267px);
 		display: block;
 		outline: none;
 		background: url('img/header-sprite.png') 0 -164px no-repeat;
+		z-index: 6;
 	}
 
 	#the-menu {
-		@import 'main-menu.less';
+		position: absolute;
+		bottom: 57px;
+		height: 50px;
+		width: @mainWidth;
+		@import 'main-menu';
+		z-index: 5;
+	}
+
+	#the-menu-bg {
+		position: absolute;
+		bottom: 57px;
+		height: 50px;
+		width: @mainWidth;
+		background: url('img/header-sprite.png') 0 -286px no-repeat;
+		z-index: 4;
 	}
 }
