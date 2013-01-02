@@ -1,3 +1,33 @@
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      FontSite Inc.
+ * License URL: http://www.fontspring.com/fflicense/fontsite
+ *
+ *
+ */
+@font-face {
+  font-family: 'SavoyCapsBold';
+  src: url('fonts/savoy_capsbold_macroman/SavoyCaps-Bold-webfont.eot');
+  src: url('fonts/savoy_capsbold_macroman/SavoyCaps-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/savoy_capsbold_macroman/SavoyCaps-Bold-webfont.woff') format('woff'), url('fonts/savoy_capsbold_macroman/SavoyCaps-Bold-webfont.ttf') format('truetype'), url('fonts/savoy_capsbold_macroman/SavoyCaps-Bold-webfont.svg#SavoyCapsBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /**
  * Main container width
 */
@@ -8,17 +38,6 @@ body {
 /**
  * Mixin for centering stuff
  */
-.hey {
-  color: #fff;
-  /*jude */
-
-}
-/**
- * This is a comment dur
- */
-#file {
-  color: green;
-}
 #header {
   height: 164px;
   width: 960px;
@@ -37,4 +56,177 @@ body {
   display: block;
   outline: none;
   background: url('img/header-sprite.png') 0 -164px no-repeat;
+}
+#header #the-menu {
+  /*** ESSENTIAL STYLES ***/
+
+  /*** DEMO SKIN ***/
+
+  /*** arrows **/
+
+  /* point right for anchors in subs */
+
+  /* apply hovers to modern browsers */
+
+  /*** shadows for all but IE6 ***/
+
+}
+#header #the-menu .main-menu,
+#header #the-menu .main-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#header #the-menu .main-menu {
+  line-height: 1.0;
+}
+#header #the-menu .main-menu ul {
+  position: absolute;
+  top: -999em;
+  width: 10em;
+  /* left offset of submenus need to match (see below) */
+
+}
+#header #the-menu .main-menu ul li {
+  width: 100%;
+}
+#header #the-menu .main-menu li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+
+}
+#header #the-menu .main-menu li {
+  float: left;
+  position: relative;
+}
+#header #the-menu .main-menu a {
+  display: block;
+  position: relative;
+}
+#header #the-menu .main-menu li:hover ul,
+#header #the-menu .main-menu li.sfHover ul {
+  left: 0;
+  top: 2.5em;
+  /* match top ul list item height */
+
+  z-index: 99;
+}
+#header #the-menu ul.main-menu li:hover li ul,
+#header #the-menu ul.main-menu li.sfHover li ul {
+  top: -999em;
+}
+#header #the-menu ul.main-menu li li:hover ul,
+#header #the-menu ul.main-menu li li.sfHover ul {
+  left: 10em;
+  /* match ul width */
+
+  top: 0;
+}
+#header #the-menu ul.main-menu li li:hover li ul,
+#header #the-menu ul.main-menu li li.sfHover li ul {
+  top: -999em;
+}
+#header #the-menu ul.main-menu li li li:hover ul,
+#header #the-menu ul.main-menu li li li.sfHover ul {
+  left: 10em;
+  /* match ul width */
+
+  top: 0;
+}
+#header #the-menu .main-menu {
+  float: left;
+  margin-bottom: 1em;
+}
+#header #the-menu .main-menu a {
+  border-left: 1px solid #fff;
+  border-top: 1px solid #CFDEFF;
+  padding: .75em 1em;
+  text-decoration: none;
+}
+#header #the-menu .main-menu a,
+#header #the-menu .main-menu a:visited {
+  /* visited pseudo selector so IE6 applies text colour*/
+
+  color: #13a;
+}
+#header #the-menu .main-menu li {
+  background: #BDD2FF;
+}
+#header #the-menu .main-menu li li {
+  background: #AABDE6;
+}
+#header #the-menu .main-menu li li li {
+  background: #9AAEDB;
+}
+#header #the-menu .main-menu li:hover,
+#header #the-menu .main-menu li.sfHover,
+#header #the-menu .main-menu a:focus,
+#header #the-menu .main-menu a:hover,
+#header #the-menu .main-menu a:active {
+  background: #CFDEFF;
+  outline: 0;
+}
+#header #the-menu .main-menu a.sf-with-ul {
+  padding-right: 2.25em;
+  min-width: 1px;
+  /* trigger IE7 hasLayout so spans position accurately */
+
+}
+#header #the-menu .sf-sub-indicator {
+  position: absolute;
+  display: block;
+  right: .75em;
+  top: 1.05em;
+  /* IE6 only */
+
+  width: 10px;
+  height: 10px;
+  text-indent: -999em;
+  overflow: hidden;
+  background: url('../images/arrows-ffffff.png') no-repeat -10px -100px;
+  /* 8-bit indexed alpha png. IE6 gets solid image only */
+
+}
+#header #the-menu a > .sf-sub-indicator {
+  /* give all except IE6 the correct values */
+
+  top: .8em;
+  background-position: 0 -100px;
+  /* use translucent arrow for modern browsers*/
+
+}
+#header #the-menu a:focus > .sf-sub-indicator,
+#header #the-menu a:hover > .sf-sub-indicator,
+#header #the-menu a:active > .sf-sub-indicator,
+#header #the-menu li:hover > a > .sf-sub-indicator,
+#header #the-menu li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px -100px;
+  /* arrow hovers for modern browsers*/
+
+}
+#header #the-menu .main-menu ul .sf-sub-indicator {
+  background-position: -10px 0;
+}
+#header #the-menu .main-menu ul a > .sf-sub-indicator {
+  background-position: 0 0;
+}
+#header #the-menu .main-menu ul a:focus > .sf-sub-indicator,
+#header #the-menu .main-menu ul a:hover > .sf-sub-indicator,
+#header #the-menu .main-menu ul a:active > .sf-sub-indicator,
+#header #the-menu .main-menu ul li:hover > a > .sf-sub-indicator,
+#header #the-menu .main-menu ul li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px 0;
+  /* arrow hovers for modern browsers*/
+
+}
+#header #the-menu .sf-shadow ul {
+  background: url('../images/shadow.png') no-repeat bottom right;
+  padding: 0 8px 9px 0;
+  -moz-border-radius-bottomleft: 17px;
+  -moz-border-radius-topright: 17px;
+  -webkit-border-top-right-radius: 17px;
+  -webkit-border-bottom-left-radius: 17px;
+}
+#header #the-menu .sf-shadow ul.sf-shadow-off {
+  background: transparent;
 }
