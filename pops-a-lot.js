@@ -7,10 +7,13 @@
 		jq('.main-menu li').addClass(function () {
 			//if the element has sub ul elements, 
 			//add a class to it so we can distinguish it from those that don't
-			console.log(this);
 			if (jq(this).children('ul').length > 0) {
 				return 'has-children';
 			} 
+		});
+
+		jq('.main-menu').superfish({
+			autoArrows: false
 		});
 	});
 }(window.jQuery));

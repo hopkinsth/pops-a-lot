@@ -1,3 +1,6 @@
+/**
+ * fonts.less: @font-face configuration
+ */
 /*
  * Web Fonts from fontspring.com
  *
@@ -29,8 +32,23 @@
   font-style: normal;
 }
 /**
+ * end fonts.less
+ */
+/**
  * Main container width
 */
+.common-style {
+  font: 300 16px/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
+}
+body,
+div,
+p,
+span,
+td {
+  font: 300 16px/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
+}
 body {
   background: #7e2219;
   margin: 0;
@@ -86,10 +104,17 @@ body {
   bottom: 57px;
   height: 50px;
   width: 960px;
+  /**
+ * main-menu.less: all the top menu CSS;
+ */
+
   /*** ESSENTIAL STYLES ***/
 
   /*** DEMO SKIN ***/
 
+  /**
+ * end main-menu.less
+ */
   z-index: 5;
 }
 #header #the-menu .main-menu,
@@ -277,6 +302,34 @@ body {
   -moz-box-shadow: 0 0 15px 0 #000000;
   -webkit-box-shadow: 0 0 15px 0 #000000;
   box-shadow: 0 0 15px 0 #000000;
+}
+#the-body #home-content {
+  margin: 30px auto;
+}
+#the-body .home-content-box {
+  -moz-box-shadow: 0 0 15px 0 #000000;
+  -webkit-box-shadow: 0 0 15px 0 #000000;
+  box-shadow: 0 0 15px 0 #000000;
+  background-color: #fff;
+  border: 1px solid #000 ;
+  float: left;
+  margin: 0 17px 0 0;
+  padding: 12px 12px;
+  /**
+		 * Maybe we'll set this with jQuery?
+		 */
+
+}
+#the-body .home-content-box.last {
+  margin-right: 0;
+}
+#the-body .home-content-box.w460 {
+  width: 436px;
+  height: 276px;
+}
+#the-body .home-content-box.w220 {
+  width: 196px;
+  height: 276px;
 }
 #tmp-filler-area {
   height: 428px;
