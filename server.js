@@ -32,7 +32,7 @@ serv.get(/^\/([^.]+)$/, function (req, resp) {
 	//compiled = mu.compile( tpl.toString() );
 
 });
-serv.get(/(.+\.[a-zA-Z]{3,5})$/, function (req, resp) {
+serv.get(/(.+\.[a-zA-Z]{2,5})$/, function (req, resp) {
 	var localPath = req.path.substr(1),
 		fileName,
 		fileType;
