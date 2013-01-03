@@ -1,4 +1,12 @@
 @textShadow: #231f20;
+
+.submenu-borders(bottom) {
+	border-bottom: 1px solid #d28329;
+}
+.submenu-borders(top) {
+	border-top: 1px solid #d28329;
+}
+
 /*** ESSENTIAL STYLES ***/
 .main-menu, .main-menu * {
 	margin:			0;
@@ -16,7 +24,7 @@
 .main-menu ul {
 	position:		absolute;
 	top:			-999em;
-	width:			10em; /* left offset of submenus need to match (see below) */
+	/*width:			10em; /* left offset of submenus need to match (see below) */
 }
 .main-menu ul li {
 	width:			100%;
@@ -35,7 +43,7 @@
 .main-menu li:hover ul,
 .main-menu li.sfHover ul {
 	left:			0;
-	top:			2.5em; /* match top ul list item height */
+	top:			50px; /* match top ul list item height */
 	z-index:		99;
 }
 ul.main-menu li:hover li ul,
@@ -44,9 +52,22 @@ ul.main-menu li.sfHover li ul {
 }
 ul.main-menu li li:hover ul,
 ul.main-menu li li.sfHover ul {
-	left:			10em; /* match ul width */
+	/*left:			10em; /* match ul width */
+	position: relative;
 	top:			0;
+
+	li:last-child {
+		border-bottom: 0;
+	}
+
+	li:first-child {
+		.submenu-borders(top);
+	}	
+
 }
+ul.main-menu li li:hover:last-child {
+}
+
 ul.main-menu li li:hover li ul,
 ul.main-menu li li.sfHover li ul {
 	top:			-999em;
@@ -68,26 +89,35 @@ ul.main-menu li li li.sfHover ul {
 	text-decoration:none;
 }
 .main-menu a, .main-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
-	color:			#13a;
+	font: normal 24px 'SavoyCapsBold';
+	text-transform: lowercase;
+	color: #fff;
+	padding: 5px;
+}
+
+.main-menu a:hover {
+	text-decoration: underline;
 }
 
 .main-menu > li > a, .main-menu > li > a:visited {
-	font: normal 24px 'SavoyCapsBold';
 	text-shadow: 4px 4px 5px @textShadow;
-	text-transform: lowercase;
-	color: #fff;
+	height: 29px;
 }
-.main-menu > li:hover {
+.main-menu > li {
+	height: 50px;
+}
+.main-menu > li:hover > a {
 	background: url('img/header-sprite.png') 0 -336px repeat;
 }
 
 @topLevelTopPadding: 9px;
+@topLevelBottomPadding: 9px;
 
 .main-menu.first > li > a {
-	padding: @topLevelTopPadding 16px @topLevelTopPadding 16px;
+	padding: @topLevelTopPadding 16px @topLevelBottomPadding 16px;
 }
 .main-menu.second > li > a {
-	padding: @topLevelTopPadding 16px @topLevelTopPadding 16px;
+	padding: @topLevelTopPadding 16px @topLevelBottomPadding 16px;
 }
 
 
@@ -96,10 +126,24 @@ ul.main-menu li li li.sfHover ul {
 	
 }
 .main-menu li li {
-
+	background: #771f15;
+	.submenu-borders(bottom);
+	@sideBorders: 1px solid #d28329;
+	border-right: @sideBorders;
+	border-left: @sideBorders;
 }
-.main-menu li li li {
 
+.main-menu li ul {
+	.shadow(0, 2px, 24px, 1px, #000);
+}
+
+.main-menu li li li {
+	border-left: 0;
+	border-right: 0;
+}
+
+.main-menu li li ul {
+	.shadow(0);
 }
 
 .main-menu.first {
