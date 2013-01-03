@@ -191,13 +191,14 @@ body {
 #header #the-menu .main-menu > li > a,
 #header #the-menu .main-menu > li > a:visited {
   text-shadow: 4px 4px 5px #231f20;
+  background: url('img/header-sprite.png') 0 -537px no-repeat;
   height: 29px;
 }
 #header #the-menu .main-menu > li {
   height: 50px;
 }
 #header #the-menu .main-menu li:hover > a {
-  background: url('img/header-sprite.png') 0 -336px repeat;
+  background: url('img/header-sprite.png') 0 -337px repeat;
 }
 #header #the-menu .main-menu.first > li > a {
   padding: 9px 16px 9px 16px;
@@ -240,12 +241,12 @@ body {
   bottom: 57px;
   height: 50px;
   width: 960px;
-  background: url('img/header-sprite.png') 0 -286px no-repeat;
+  background: url('img/header-sprite.png') 0 -287px no-repeat;
   z-index: 4;
 }
 #the-body {
   min-height: 900px;
-  background: url('img/body-bg.jpg') no-repeat;
+  background: url('img/body-bg.jpg') 0 0 no-repeat;
   padding: 10px;
 }
 #the-body #home-carousel {
