@@ -31,6 +31,7 @@ body {
 #the-container {
 	.outer-shadow;
 	.centered(@mainWidth);
+	margin-bottom: 45px;
 }
 
 #header {
@@ -66,5 +67,19 @@ body {
 		width: @mainWidth;
 		background: url('img/header-sprite.png') 0 -286px no-repeat;
 		z-index: 4;
+	}
+}
+
+#the-body {
+	min-height: 900px;
+	background: url('img/body-bg.jpg') no-repeat;
+	padding: 10px;
+
+	#home-carousel {
+		width: 938px;
+		height: 498px;
+		background: #fff;
+		border: 1px solid #000;
+		.shadow(0, 0, 15px, 0, #000);
 	}
 }

@@ -50,6 +50,7 @@ body {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 45px;
 }
 #header {
   height: 164px;
@@ -232,4 +233,18 @@ body {
   width: 960px;
   background: url('img/header-sprite.png') 0 -286px no-repeat;
   z-index: 4;
+}
+#the-body {
+  min-height: 900px;
+  background: url('img/body-bg.jpg') no-repeat;
+  padding: 10px;
+}
+#the-body #home-carousel {
+  width: 938px;
+  height: 498px;
+  background: #fff;
+  border: 1px solid #000;
+  -moz-box-shadow: 0 0 15px 0 #000000;
+  -webkit-box-shadow: 0 0 15px 0 #000000;
+  box-shadow: 0 0 15px 0 #000000;
 }
