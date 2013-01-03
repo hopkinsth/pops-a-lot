@@ -186,7 +186,7 @@ body {
 #header #the-menu .main-menu > li {
   height: 50px;
 }
-#header #the-menu .main-menu > li:hover > a {
+#header #the-menu .main-menu li:hover > a {
   background: url('img/header-sprite.png') 0 -336px repeat;
 }
 #header #the-menu .main-menu.first > li > a {
@@ -202,9 +202,9 @@ body {
   border-left: 1px solid #d28329;
 }
 #header #the-menu .main-menu li ul {
-  -moz-box-shadow: 0 2px 24px 1px #000000;
-  -webkit-box-shadow: 0 2px 24px 1px #000000;
-  box-shadow: 0 2px 24px 1px #000000;
+  -moz-box-shadow: 0 6px 20px 0px #000000;
+  -webkit-box-shadow: 0 6px 20px 0px #000000;
+  box-shadow: 0 6px 20px 0px #000000;
 }
 #header #the-menu .main-menu li li li {
   border-left: 0;
