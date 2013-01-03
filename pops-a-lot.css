@@ -229,6 +229,9 @@ body {
   border-right: 1px solid #d28329;
   border-left: 1px solid #d28329;
 }
+#header #the-menu .main-menu li li:hover {
+  background: #611911;
+}
 #header #the-menu .main-menu li ul {
   -moz-box-shadow: 0 6px 20px 0px #000000;
   -webkit-box-shadow: 0 6px 20px 0px #000000;
