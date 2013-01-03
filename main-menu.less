@@ -20,6 +20,7 @@
 	top: 1px;
 	height: 50px;
 	/*bottom: 45px;*/
+	/*width: 50%;*/
 }
 .main-menu ul {
 	position:		absolute;
@@ -101,15 +102,32 @@ ul.main-menu li li li.sfHover ul {
 
 .main-menu > li > a, .main-menu > li > a:visited {
 	text-shadow: 4px 4px 5px @textShadow;
-	background: url('img/header-sprite.png') 0 -537px no-repeat;
 	height: 29px;
+	position: relative;
+	bottom: 1px;
+}
+.main-menu > li.separator {
+	@separatorBG: url('img/main-menu-separator.png') left top no-repeat;
+	background: @separatorBG;
+	height: 50px;
+	width: 8px;
+	margin-right: -4px;
+
+	&:hover {
+		background: @separatorBG;
+	}
 }
 .main-menu > li {
 	height: 50px;
+	/*margin-right: 8px;*/
 }
-.main-menu li:hover > a {
+.main-menu > li:hover {
 	background: url('img/header-sprite.png') 0 -337px repeat;
 }
+
+.main-menu > li:last-child > a {
+	background: none;
+};
 
 @topLevelTopPadding: 9px;
 @topLevelBottomPadding: 9px;

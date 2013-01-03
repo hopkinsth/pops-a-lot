@@ -107,6 +107,8 @@ body {
   height: 50px;
   /*bottom: 45px;*/
 
+  /*width: 50%;*/
+
 }
 #header #the-menu .main-menu ul {
   position: absolute;
@@ -191,14 +193,29 @@ body {
 #header #the-menu .main-menu > li > a,
 #header #the-menu .main-menu > li > a:visited {
   text-shadow: 4px 4px 5px #231f20;
-  background: url('img/header-sprite.png') 0 -537px no-repeat;
   height: 29px;
+  position: relative;
+  bottom: 1px;
+}
+#header #the-menu .main-menu > li.separator {
+  background: url('img/main-menu-separator.png') left top no-repeat;
+  height: 50px;
+  width: 8px;
+  margin-right: -4px;
+}
+#header #the-menu .main-menu > li.separator:hover {
+  background: url('img/main-menu-separator.png') left top no-repeat;
 }
 #header #the-menu .main-menu > li {
   height: 50px;
+  /*margin-right: 8px;*/
+
 }
-#header #the-menu .main-menu li:hover > a {
+#header #the-menu .main-menu > li:hover {
   background: url('img/header-sprite.png') 0 -337px repeat;
+}
+#header #the-menu .main-menu > li:last-child > a {
+  background: none;
 }
 #header #the-menu .main-menu.first > li > a {
   padding: 9px 16px 9px 16px;
