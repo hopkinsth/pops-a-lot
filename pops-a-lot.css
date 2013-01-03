@@ -305,6 +305,7 @@ body {
 }
 #the-body #home-content {
   margin: 30px auto;
+  position: relative;
 }
 #the-body .home-content-box {
   -moz-box-shadow: 0 0 15px 0 #000000;
@@ -315,6 +316,8 @@ body {
   float: left;
   margin: 0 17px 0 0;
   padding: 12px 12px;
+  z-index: 4;
+  position: relative;
   /**
 		 * Maybe we'll set this with jQuery?
 		 */
@@ -322,6 +325,35 @@ body {
 }
 #the-body .home-content-box.last {
   margin-right: 0;
+}
+#the-body .home-content-box.heading {
+  -moz-box-shadow: 0 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+  border: 0;
+  padding: 0;
+  z-index: 5 !important;
+  position: relative;
+}
+#the-body .home-content-box#latest-news {
+  height: 108px;
+  width: 444px;
+  background: url('img/latest-news.png') no-repeat;
+  top: 13px;
+}
+#the-body .home-content-box#featured-flavor {
+  height: 95px;
+  width: 229px;
+  background: url('img/featured-flavor.png') no-repeat;
+  top: 18px;
+  left: 10px;
+}
+#the-body .home-content-box#special-offers {
+  height: 95px;
+  width: 229px;
+  background: url('img/special-offers.png') no-repeat;
+  top: 19px;
+  left: 3px;
 }
 #the-body .home-content-box.w460 {
   width: 436px;

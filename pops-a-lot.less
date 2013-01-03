@@ -107,6 +107,7 @@ body {
 
 	#home-content {
 		margin: 30px auto;
+		position: relative;
 	}
 
 	.home-content-box {
@@ -115,16 +116,48 @@ body {
 		border: 1px solid #000 ;
 		.left;
 		margin: 0 17px 0 0;
-
 		@topPadding: 12px;
 		@sidePadding: 12px;
 		padding: @topPadding @sidePadding;
+		z-index: 4;
+		position: relative;
 
 		/**
 		 * Maybe we'll set this with jQuery?
 		 */
 		&.last {
 			margin-right: 0;
+		}
+
+		&.heading {
+			.shadow(0);
+			border: 0;
+			padding: 0;
+			z-index: 5 !important;
+			position: relative;
+		}
+
+		&#latest-news {
+			height: 108px;
+			width: 444px;
+			background: url('img/latest-news.png') no-repeat;
+			top: 13px;
+		}
+
+		&#featured-flavor {
+			height: 95px;
+			width: 229px;
+			background:url('img/featured-flavor.png') no-repeat;
+			top: 18px;
+			left: 10px;	
+		}
+
+		&#special-offers {
+			height: 95px;
+			width: 229px;
+			background: url('img/special-offers.png') no-repeat;
+			top: 19px;
+			left: 3px;
 		}
 
 		&.w460 {
