@@ -248,3 +248,22 @@ body {
   -webkit-box-shadow: 0 0 15px 0 #000000;
   box-shadow: 0 0 15px 0 #000000;
 }
+#tmp-filler-area {
+  height: 428px;
+}
+#the-footer {
+  width: 924px;
+  height: 133px;
+  background: #fff;
+  padding: 8px 8px;
+  -moz-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+}
+#the-footer #footer-inner {
+  width: 924px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 135px;
+  background: url('img/footer-inner-bg.jpg') no-repeat;
+}
