@@ -35,6 +35,15 @@ body {
   background: #7e2219;
   margin: 0;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
 /**
  * Mixin for centering stuff
  */
@@ -252,7 +261,6 @@ body {
   height: 428px;
 }
 #the-footer {
-  width: 924px;
   height: 133px;
   background: #fff;
   padding: 8px 8px;
@@ -261,9 +269,113 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
 }
 #the-footer #footer-inner {
-  width: 924px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 135px;
+  /*.centered(924px);*/
+
+  height: 127px;
   background: url('img/footer-inner-bg.jpg') no-repeat;
+  padding: 4px;
+}
+#the-footer #footer-menu-box {
+  border: 1px solid #771616;
+  padding: 6px 13px;
+  height: 113px;
+}
+#the-footer #footer-menu-box .heading-style {
+  font: bold 15px "Helvetica Neue", Arial, sans-serif;
+  color: #884e42;
+}
+#the-footer #footer-menu-box .large-footer-menu {
+  /*width: 457px;*/
+
+  padding: 0;
+  margin: 0;
+  float: left;
+  /*&>li > a,*/
+
+}
+#the-footer #footer-menu-box .large-footer-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#the-footer #footer-menu-box .large-footer-menu > li > a {
+  /* first level style! */
+
+  font: bold 15px "Helvetica Neue", Arial, sans-serif;
+  color: #884e42;
+  line-height: 1;
+}
+#the-footer #footer-menu-box .large-footer-menu > li {
+  width: 155px;
+}
+#the-footer #footer-menu-box .large-footer-menu li {
+  float: left;
+  position: relative;
+}
+#the-footer #footer-menu-box .large-footer-menu a {
+  display: block;
+  position: relative;
+  padding: 0;
+  text-decoration: none;
+}
+#the-footer #footer-menu-box .large-footer-menu li li a {
+  font: 300 16px "Helvetica Neue", sans-serif;
+  line-height: 1;
+  color: #7d7d7d;
+}
+#the-footer #footer-menu-box .large-footer-menu ul li {
+  width: 100%;
+  margin: 8px 0 0 0;
+}
+#the-footer #footer-menu-box #footer-social {
+  margin-left: 30px;
+  font: bold 15px "Helvetica Neue", Arial, sans-serif;
+  color: #884e42;
+  float: left;
+}
+#the-footer #footer-menu-box #footer-social .icon {
+  width: 37px;
+  height: 36px;
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+#the-footer #footer-menu-box #footer-social .icon.facebook {
+  background: url('img/icon-sprite.png') 0 0 no-repeat;
+}
+#the-footer #footer-menu-box #footer-social .icon.twitter {
+  background: url('img/icon-sprite.png') 0 -36px no-repeat;
+}
+#the-footer #footer-menu-box #small-footer-menu {
+  float: right;
+  width: 220px;
+  height: 45px;
+  position: relative;
+  top: 65px;
+  left: 10px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #7d7d7d;
+}
+#the-footer #footer-menu-box #small-footer-menu .common-font {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #7d7d7d;
+}
+#the-footer #footer-menu-box #small-footer-menu p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #7d7d7d;
+  margin: 8px 0;
+}
+#the-footer #footer-menu-box #small-footer-menu a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #7d7d7d;
+  text-decoration: none;
 }

@@ -9,6 +9,18 @@ body {
 	margin: 0;
 }
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
 /**
  * Mixin for centering stuff
  */
@@ -89,15 +101,132 @@ body {
 }
 
 #the-footer {
-	width: 924px;
 	height: 133px;
 	background: #fff;
 	padding: 8px 8px;
 	.shadow(0, 0, 15px, 0, fadeout(#000, 20%) );
 	
 	#footer-inner {
-		.centered(924px);
-		height: 135px;
+		/*.centered(924px);*/
+		height: 127px;
 		background: url('img/footer-inner-bg.jpg') no-repeat;
+		padding: 4px;
+	}
+
+	#footer-menu-box {
+		@borderSize: 1px;
+		@topPaddingSize: 6px;
+		@sidePaddingSize: 13px;
+
+		@heightSubtract: ( (@borderSize * 2) + ( @topPaddingSize * 2 ) );
+		
+		border: 1px solid #771616;
+		padding: @topPaddingSize @sidePaddingSize;
+		height: ( 127px - @heightSubtract );
+
+		.heading-style {
+			font: bold 15px "Helvetica Neue", Arial, sans-serif;
+			color: #884e42;
+		}
+
+		.large-footer-menu {
+			@theLineHeight: 1.0;
+			/*width: 457px;*/
+			padding: 0;
+			margin: 0;
+			float: left;
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			&>li > a {
+				/* first level style! */
+				.heading-style;
+				line-height: @theLineHeight;
+
+			}
+
+			/*&>li > a,*/
+			&>li {
+				width: 465px / 3;
+			}
+
+
+			li {
+				float: left;
+				position: relative;
+			}
+
+			a {
+				display: block;
+				position: relative;
+				padding: 0;
+				text-decoration: none;
+			}
+
+			li li a {
+				font: 300 16px "Helvetica Neue", sans-serif;
+				line-height: @theLineHeight;
+				color: #7d7d7d;
+
+			}
+
+			ul li {
+				width: 100%;
+				margin: 8px 0 0 0;
+			}
+		}
+
+		#footer-social {
+			margin-left: 30px;
+			.heading-style;
+			.left;
+			.icon {
+				width: 37px;
+				height: 36px;
+				display: block;
+				.left;
+				margin-right: 8px;
+				margin-top: 8px;
+
+				&.facebook {
+					background: url('img/icon-sprite.png') 0 0 no-repeat;
+				}
+
+				&.twitter {
+					background: url('img/icon-sprite.png') 0 -36px no-repeat;
+				}
+			}
+		}
+
+		#small-footer-menu {
+			.right;
+			width: 220px;
+			height: 45px;
+
+			position: relative;
+			top: 65px;
+			left: 10px;
+
+			.common-font {
+				font-family: 'Helvetica Neue', sans-serif;
+				font-size: 12px;
+				font-weight: 300;
+				color: #7d7d7d;
+			}
+
+			.common-font;
+			p { 
+				.common-font;
+				margin: 8px 0;
+			}
+			a {
+				.common-font;
+				text-decoration: none;
+			}
+
+		}
 	}
 }
