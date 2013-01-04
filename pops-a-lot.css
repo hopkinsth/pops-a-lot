@@ -439,6 +439,10 @@ body {
   color: #884e42;
   float: left;
 }
+#the-footer #footer-menu-box #footer-social div {
+  font: bold 15px "Helvetica Neue", Arial, sans-serif;
+  color: #884e42;
+}
 #the-footer #footer-menu-box #footer-social .icon {
   width: 37px;
   height: 36px;
@@ -465,6 +469,7 @@ body {
   font-weight: 300;
   color: #7d7d7d;
 }
+#the-footer #footer-menu-box #small-footer-menu .common-font,
 #the-footer #footer-menu-box #small-footer-menu .common-font {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 12px;
