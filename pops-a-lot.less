@@ -98,15 +98,19 @@ body {
 	padding: 10px;
 
 	#home-carousel {
-		width: 938px;
-		height: 498px;
-		background: #fff;
-		border: 1px solid #000;
-		.shadow(0, 0, 15px, 0, #000);
+		width: 951px;
+		height: 528px;
+		background: url('img/carousel-stage.png') 0 0 no-repeat;
+
+		/**
+		 * This element doesn't fit inside the outer container padding, so we need to bump it over
+		 */
+		position: relative;
+		right: 5px;
 	}
 
 	#home-content {
-		margin: 0px auto 30px;
+		margin: 85px auto 30px;
 		position: relative;
 	}
 
@@ -137,6 +141,17 @@ body {
 			position: relative;
 		}
 
+		@boxTitleHeight: 87px;
+
+		.box-title(@url) {
+			width: 294px;
+			height: @boxTitleHeight;
+			background: url(@url) 0 0 no-repeat;
+			position: absolute;
+			top: -75px;
+			left: 3px;
+		}
+
 		&#latest-news {
 			height: 108px;
 			width: 444px;
@@ -160,9 +175,26 @@ body {
 			left: 3px;
 		}
 
+		&#fresh-from-the-kitchen {
+			.box-title('img/fresh-from-the-kitchen.png');
+		}
+
+		&#flavor-in-focus {
+			.box-title('img/flavor-in-focus.png');
+		}
+
+		&#spotlight-special {
+			.box-title('img/spotlight-special.png');
+		}
+
 		&.w460 {
 			width: ( 460px - (@sidePadding * 2) );
 			height: ( 300px - (@topPadding * 2) );
+		}
+
+		&.w300 {
+			width: ( 300px - (@sidePadding * 2) ) ;
+			height: ( ( 300px - (@topPadding * 2) ) );
 		}
 
 		&.w220 {

@@ -12,8 +12,8 @@
 			} 
 		});
 
-		jq('.main-menu').superfish({
-			autoArrows: false
-		});
+		// jq('.main-menu').superfish({
+		// 	autoArrows: false
+		// });
 	});
 }(window.jQuery));

@@ -104,7 +104,7 @@ body {
   bottom: 57px;
   height: 50px;
   width: 960px;
-  /**
+  /*
  * main-menu.less: all the top menu CSS;
  */
 
@@ -138,7 +138,8 @@ body {
 #header #the-menu .main-menu ul {
   position: absolute;
   top: -999em;
-  /*width:			10em; /* left offset of submenus need to match (see below) */
+  width: 10em;
+  /* left offset of submenus need to match (see below) */
 
 }
 #header #the-menu .main-menu ul li {
@@ -171,9 +172,10 @@ body {
 }
 #header #the-menu ul.main-menu li li:hover ul,
 #header #the-menu ul.main-menu li li.sfHover ul {
-  /*left:			10em; /* match ul width */
+  left: 10em;
+  /* match ul width */
 
-  position: relative;
+  position: absolute;
   top: 0;
 }
 #header #the-menu ul.main-menu li li:hover ul li:last-child,
@@ -257,19 +259,15 @@ body {
 #header #the-menu .main-menu li li:hover {
   background: #611911;
 }
-#header #the-menu .main-menu li ul {
+#header #the-menu .main-menu > li > ul {
   -moz-box-shadow: 0 6px 20px 0px #000000;
   -webkit-box-shadow: 0 6px 20px 0px #000000;
   box-shadow: 0 6px 20px 0px #000000;
 }
-#header #the-menu .main-menu li li li {
-  border-left: 0;
-  border-right: 0;
-}
-#header #the-menu .main-menu li li ul {
-  -moz-box-shadow: 0 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 0 0 transparent;
-  box-shadow: 0 0 0 0 transparent;
+#header #the-menu .main-menu > li > ul > li ul {
+  -moz-box-shadow: 7px 6px 30px 0px #000000;
+  -webkit-box-shadow: 7px 6px 30px 0px #000000;
+  box-shadow: 7px 6px 30px 0px #000000;
 }
 #header #the-menu .main-menu.first {
   /*bottom: 50%;*/
@@ -295,16 +293,18 @@ body {
   padding: 10px;
 }
 #the-body #home-carousel {
-  width: 938px;
-  height: 498px;
-  background: #fff;
-  border: 1px solid #000;
-  -moz-box-shadow: 0 0 15px 0 #000000;
-  -webkit-box-shadow: 0 0 15px 0 #000000;
-  box-shadow: 0 0 15px 0 #000000;
+  width: 951px;
+  height: 528px;
+  background: url('img/carousel-stage.png') 0 0 no-repeat;
+  /**
+		 * This element doesn't fit inside the outer container padding, so we need to bump it over
+		 */
+
+  position: relative;
+  right: 5px;
 }
 #the-body #home-content {
-  margin: 0px auto 30px;
+  margin: 85px auto 30px;
   position: relative;
 }
 #the-body .home-content-box {
@@ -355,8 +355,36 @@ body {
   top: 19px;
   left: 3px;
 }
+#the-body .home-content-box#fresh-from-the-kitchen {
+  width: 294px;
+  height: 87px;
+  background: url('img/fresh-from-the-kitchen.png') 0 0 no-repeat;
+  position: absolute;
+  top: -75px;
+  left: 3px;
+}
+#the-body .home-content-box#flavor-in-focus {
+  width: 294px;
+  height: 87px;
+  background: url('img/flavor-in-focus.png') 0 0 no-repeat;
+  position: absolute;
+  top: -75px;
+  left: 3px;
+}
+#the-body .home-content-box#spotlight-special {
+  width: 294px;
+  height: 87px;
+  background: url('img/spotlight-special.png') 0 0 no-repeat;
+  position: absolute;
+  top: -75px;
+  left: 3px;
+}
 #the-body .home-content-box.w460 {
   width: 436px;
+  height: 276px;
+}
+#the-body .home-content-box.w300 {
+  width: 276px;
   height: 276px;
 }
 #the-body .home-content-box.w220 {

@@ -1,4 +1,4 @@
-/**
+/*
  * main-menu.less: all the top menu CSS;
  */
 @textShadow: #231f20;
@@ -28,7 +28,7 @@
 .main-menu ul {
 	position:		absolute;
 	top:			-999em;
-	/*width:			10em; /* left offset of submenus need to match (see below) */
+	width:			10em; /* left offset of submenus need to match (see below) */
 }
 .main-menu ul li {
 	width:			100%;
@@ -56,8 +56,8 @@ ul.main-menu li.sfHover li ul {
 }
 ul.main-menu li li:hover ul,
 ul.main-menu li li.sfHover ul {
-	/*left:			10em; /* match ul width */
-	position: relative;
+	left:			10em; /* match ul width */
+	position: absolute;
 	top:			0;
 
 	li:last-child {
@@ -159,18 +159,19 @@ ul.main-menu li li li.sfHover ul {
 	background: darken(#771f15, 5%);
 }
 
-.main-menu li ul {
+.main-menu > li > ul {
 	.shadow(0, 6px, 20px, 0px, #000);
 }
 
 .main-menu li li li {
-	border-left: 0;
-	border-right: 0;
+	// border-left: 0;
+	// border-right: 0;
 }
 
-.main-menu li li ul {
-	.shadow(0);
+.main-menu > li > ul > li ul {
+	.shadow(7px, 6px, 30px, 0px, #000);
 }
+
 
 .main-menu.first {
 	/*bottom: 50%;*/
