@@ -1,5 +1,6 @@
 @import 'fonts.less';
 @bgcolor: #7e2219;
+@imgPathBase: 'img/';
 /**
  * Main container width
 */
@@ -101,6 +102,15 @@ body {
 		width: 951px;
 		height: 528px;
 		background: url('img/carousel-stage.png') 0 0 no-repeat;
+		position: relative;
+
+		#flash-container {
+			width: 900px;
+			height: 390px;
+			position: absolute;
+			top: 73px;
+			left: 26px;
+		}
 
 		/**
 		 * This element doesn't fit inside the outer container padding, so we need to bump it over
@@ -206,6 +216,111 @@ body {
 
 #tmp-filler-area {
 	height:428px;
+}
+
+#flavor-nav {
+	@spritePath: 'img/flavor-pages/flavor-nav-sprite.png';
+
+	.nav-sprite( @x: 0, @y: 0) {
+		background: url(@spritePath) @x @y no-repeat; 
+	}
+
+	.nav-item {
+		width: 128px;
+		height: 130px;
+		.left;
+		position: relative;
+
+		.img {
+			width: 103px;
+			position: absolute;
+		}
+
+		.text {
+			position: absolute;
+			bottom: 0;
+			font: normal 13px 'SavoyCapsBold', sans-serif;
+			text-transform: uppercase;
+			text-align: center;
+
+			&.one-line {
+				left: 5px;
+				bottom:6px;
+			}
+
+			&.two-line {
+				bottom: 5px;
+			}
+		}
+
+		&.polaroid {
+			.nav-sprite(0, 0);
+			height: 128px !important;
+
+			.img {
+				top: 9px;
+				left: 11px;
+			}
+		}
+		&.stamp {
+			.nav-sprite(0, -128px);
+
+			.img {
+				top: 13px;
+				left: 13px;
+			}
+		}
+
+
+		&.london-kettle {
+			.img {
+				height: 82px;
+				.nav-sprite(0, -258px);
+			}
+		}
+
+		&.clandestine-caramel {
+			.img {
+				height: 86px;
+				.nav-sprite(0, -340px);
+			} 
+		}
+
+		&.roman-holiday {
+			.img {
+				height: 82px;
+				.nav-sprite(0, -426px);
+			}
+		}
+
+		&.saigon-sunrise {
+			.img {
+				height: 82px;
+				.nav-sprite(0, -508px);
+			}
+		}
+
+		&.honalulu-aloha {
+			.img {
+				height: 82px;
+				.nav-sprite(0, -590px);
+			}
+		}
+
+		&.southern-surprise {
+			.img {
+				height: 82px;
+				.nav-sprite(0, -672px);
+			}
+		}
+
+		&.brazilian-samba {
+			.img {
+				height: 82px;
+				.nav-sprite(0, -754px);
+			}
+		}
+	}
 }
 
 #the-footer {

@@ -1,4 +1,4 @@
-(function (jq) {
+(function (jq, sw) {
 	jq(function () {
 		//adds the separator elements to the menu, which, unfortunately,
 		//need to be separate elements
@@ -15,5 +15,7 @@
 		// jq('.main-menu').superfish({
 		// 	autoArrows: false
 		// });
+		
+		sw.registerObject('home-carousel-flash', '9.0.0');
 	});
-}(window.jQuery));
+}(window.jQuery, window.swfobject));

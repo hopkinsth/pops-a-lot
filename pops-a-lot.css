@@ -180,7 +180,8 @@ body {
 }
 #header #the-menu ul.main-menu li li:hover ul li:last-child,
 #header #the-menu ul.main-menu li li.sfHover ul li:last-child {
-  border-bottom: 0;
+  /*border-bottom: 0;*/
+
 }
 #header #the-menu ul.main-menu li li:hover ul li:first-child,
 #header #the-menu ul.main-menu li li.sfHover ul li:first-child {
@@ -303,6 +304,13 @@ body {
   position: relative;
   right: 5px;
 }
+#the-body #home-carousel #flash-container {
+  width: 900px;
+  height: 390px;
+  position: absolute;
+  top: 73px;
+  left: 26px;
+}
 #the-body #home-content {
   margin: 85px auto 30px;
   position: relative;
@@ -393,6 +401,73 @@ body {
 }
 #tmp-filler-area {
   height: 428px;
+}
+#flavor-nav .nav-item {
+  width: 128px;
+  height: 130px;
+  float: left;
+  position: relative;
+}
+#flavor-nav .nav-item .img {
+  width: 103px;
+  position: absolute;
+}
+#flavor-nav .nav-item .text {
+  position: absolute;
+  bottom: 0;
+  font: normal 13px 'SavoyCapsBold', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+#flavor-nav .nav-item .text.one-line {
+  left: 5px;
+  bottom: 6px;
+}
+#flavor-nav .nav-item .text.two-line {
+  bottom: 5px;
+}
+#flavor-nav .nav-item.polaroid {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 0 no-repeat;
+  height: 128px !important;
+}
+#flavor-nav .nav-item.polaroid .img {
+  top: 9px;
+  left: 11px;
+}
+#flavor-nav .nav-item.stamp {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -128px no-repeat;
+}
+#flavor-nav .nav-item.stamp .img {
+  top: 13px;
+  left: 13px;
+}
+#flavor-nav .nav-item.london-kettle .img {
+  height: 82px;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -258px no-repeat;
+}
+#flavor-nav .nav-item.clandestine-caramel .img {
+  height: 86px;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -340px no-repeat;
+}
+#flavor-nav .nav-item.roman-holiday .img {
+  height: 82px;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -426px no-repeat;
+}
+#flavor-nav .nav-item.saigon-sunrise .img {
+  height: 82px;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -508px no-repeat;
+}
+#flavor-nav .nav-item.honalulu-aloha .img {
+  height: 82px;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -590px no-repeat;
+}
+#flavor-nav .nav-item.southern-surprise .img {
+  height: 82px;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -672px no-repeat;
+}
+#flavor-nav .nav-item.brazilian-samba .img {
+  height: 82px;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -754px no-repeat;
 }
 #the-footer {
   height: 133px;
