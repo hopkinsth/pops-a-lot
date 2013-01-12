@@ -6,6 +6,28 @@ var exp = require('express'),
 serv = exp();
 
 /**
+ * loads us up some templates, yeah.
+ * @return string
+ */
+function renderTemplates(templateString) {
+	var k, 
+		tags,
+		viewData = {},
+		result;
+
+	tags = mu.parse( templateString );
+
+	for (k = 0; k < tags.length; k += 1) {
+		ref = tags[k];
+		if (ref[0] === '&') {
+			viewData[ref[1]] = renderTemplates( fs.readFileSync( ref[1] + '.mustache' ).toString() );
+		}
+	}
+
+	return mu.render( templateString, viewData );
+}
+
+/**
  * On requests, load the mustache file specified in the URL and render the mustache template
  * @param  {[type]} req  [description]
  * @param  {[type]} resp [description]
@@ -19,16 +41,12 @@ serv.get(/^\/([^.]+)$/, function (req, resp) {
 		ref,
 		viewData = {};
 
-	tags = mu.parse( tpl.toString() );
-	console.log(tags);
-	for (k = 0; k < tags.length; k += 1) {
-		ref = tags[k];
-		if (ref[0] === '&') {
-			viewData[ref[1]] = fs.readFileSync( ref[1] + '.mustache' );
-		}
-	}
+	//tags = mu.parse( tpl.toString() );
+	//console.log(tags);
 
-	resp.send( mu.render( tpl.toString(), viewData ) );
+	resp.send( renderTemplates( tpl.toString() ) );
+
+	//resp.send( mu.render( tpl.toString(), viewData ) );
 	//compiled = mu.compile( tpl.toString() );
 
 });
