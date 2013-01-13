@@ -236,90 +236,207 @@ body {
 			position: absolute;
 		}
 
+		&> a {
+			visibility: hidden;
+			display: block;
+			width: 128px;
+			height: 130px;
+			color: transparent;
+			.nav-sprite( -10px, -1024px );
+		}
+
+
+		&:hover > a {
+			display: block;
+			visibility: visible;
+		}
+
+		margin-right: 7px;
+
+		&.last {
+			margin-right: 0;
+		}
+
+
 		.text {
 			position: absolute;
 			bottom: 0;
-			font: normal 13px 'SavoyCapsBold', sans-serif;
+			font: normal 12px 'SavoyCapsBold', sans-serif;
 			text-transform: uppercase;
 			text-align: center;
 
 			&.one-line {
-				left: 5px;
-				bottom:6px;
+				/*left: 5px;*/
+				bottom:18px;
+				width: 123px;
 			}
 
 			&.two-line {
 				bottom: 5px;
 			}
 		}
-
+/*
 		&.polaroid {
 			.nav-sprite(0, 0);
 			height: 128px !important;
 
-			.img {
+			
 				top: 9px;
 				left: 11px;
-			}
+			
 		}
 		&.stamp {
 			.nav-sprite(0, -128px);
 
-			.img {
+			
 				top: 13px;
 				left: 13px;
-			}
+			
 		}
+		*/
 
 
 		&.london-kettle {
-			.img {
-				height: 82px;
-				.nav-sprite(0, -258px);
-			}
+			.nav-sprite(-10px, -10px);
 		}
 
 		&.clandestine-caramel {
-			.img {
-				height: 86px;
-				.nav-sprite(0, -340px);
-			} 
+			.nav-sprite(-10px, -154px);
 		}
 
 		&.roman-holiday {
-			.img {
-				height: 82px;
-				.nav-sprite(0, -426px);
-			}
+			.nav-sprite(-10px, -298px);
 		}
 
 		&.saigon-sunrise {
-			.img {
-				height: 82px;
-				.nav-sprite(0, -508px);
-			}
+			.nav-sprite(-10px, -442px);
 		}
 
 		&.honalulu-aloha {
-			.img {
-				height: 82px;
-				.nav-sprite(0, -590px);
-			}
+			.nav-sprite(-10px, -586px);
 		}
 
 		&.southern-surprise {
-			.img {
-				height: 82px;
-				.nav-sprite(0, -672px);
-			}
+			.nav-sprite(-10px, -730px);
 		}
 
 		&.brazilian-samba {
-			.img {
-				height: 82px;
-				.nav-sprite(0, -754px);
+			.nav-sprite(-10px, -874px);
+		}
+	}
+}
+
+#flavor-page {
+	margin-top: 25px;
+	/*z-index: 3;*/
+	position: relative;
+
+	min-height: 640px;
+ 	
+	.ribbon {
+		position: absolute;
+		left: 0;
+		z-index: 5;
+		left: -10px;
+		width: 407px;
+		height: 100px;
+
+		.ribbon-sprite(@x: 0, @y: 0) {
+			background: url('img/flavor-pages/flavor-ribbon-sprite.png') @x @y no-repeat;
+		}
+
+		&.london-kettle {
+			.ribbon-sprite(0, 0);
+		}
+
+		&.clandestine-caramel {
+			.ribbon-sprite(0, -100px);
+		}
+
+		&.roman-holiday {
+			.ribbon-sprite(0, -200px);
+		}
+
+		&.saigon-sunrise {
+			.ribbon-sprite(0, -300px);
+		}
+
+		&.honalulu-aloha {
+			.ribbon-sprite(0, -400px);
+		}
+
+		&.southern-surprise {
+			.ribbon-sprite(0, -500px);
+		}
+
+		&.brazilian-samba {
+			.ribbon-sprite(0, -600px);
+		}
+	}
+
+	.background {
+		position: absolute;
+		z-index: 4;
+	}
+
+	.info-box {
+		.shadow(0, 0, 15px, 0, fadeout(#000, 20%) );
+		@boxPadding: 5px;
+		width: 285px ;
+		min-height: 394px;
+		background: #fff;
+		position: absolute;
+		top: 110px;
+		padding: @boxPadding;
+		z-index: 6;
+		.inner {
+			border: 2px solid #b88d87;
+			height: 384px;
+			padding: 5px;
+			position: relative;
+			.nutrition-info {
+				background: url('img/flavor-pages/nutrition-info.png') 0 0 no-repeat;
+				cursor: pointer;
+				/*width: 139px;*/
+				width: 305px;
+				height: 24px;
+				position: absolute;
+				bottom: 5px;
+
+				.nutrition-label {
+					display: none;
+					position: absolute;
+					left: 300px;
+					width: 230px;
+					height: 525px;
+					bottom: -80px
+				}
 			}
 		}
+	}
+
+	&.london-kettle {
+		.nutrition-label {
+			background: url('img/flavor-pages/nutrition/nutri_label_kettle.gif') 0 0 no-repeat;
+		}
+
+		.background {
+			background: url('img/flavor-pages/background/london-kettle.png') 0 0;
+			width: 642px;
+			height: 606px;
+			right: 0;
+		}
+	}
+
+	.place-order {
+		outline: 0;
+		display: block;
+		position: absolute;
+		width: 230px;
+		height: 97px;
+		bottom: 15px;
+		left: 30px;
+		background: url('img/flavor-pages/place-an-order.png') 0 0 no-repeat;
 	}
 }
 

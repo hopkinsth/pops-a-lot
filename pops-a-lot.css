@@ -407,67 +407,178 @@ body {
   height: 130px;
   float: left;
   position: relative;
+  margin-right: 7px;
+  /*
+		&.polaroid {
+			.nav-sprite(0, 0);
+			height: 128px !important;
+
+			
+				top: 9px;
+				left: 11px;
+			
+		}
+		&.stamp {
+			.nav-sprite(0, -128px);
+
+			
+				top: 13px;
+				left: 13px;
+			
+		}
+		*/
+
 }
 #flavor-nav .nav-item .img {
   width: 103px;
   position: absolute;
 }
+#flavor-nav .nav-item > a {
+  visibility: hidden;
+  display: block;
+  width: 128px;
+  height: 130px;
+  color: transparent;
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -1024px no-repeat;
+}
+#flavor-nav .nav-item:hover > a {
+  display: block;
+  visibility: visible;
+}
+#flavor-nav .nav-item.last {
+  margin-right: 0;
+}
 #flavor-nav .nav-item .text {
   position: absolute;
   bottom: 0;
-  font: normal 13px 'SavoyCapsBold', sans-serif;
+  font: normal 12px 'SavoyCapsBold', sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
 #flavor-nav .nav-item .text.one-line {
-  left: 5px;
-  bottom: 6px;
+  /*left: 5px;*/
+
+  bottom: 18px;
+  width: 123px;
 }
 #flavor-nav .nav-item .text.two-line {
   bottom: 5px;
 }
-#flavor-nav .nav-item.polaroid {
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 0 no-repeat;
-  height: 128px !important;
+#flavor-nav .nav-item.london-kettle {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -10px no-repeat;
 }
-#flavor-nav .nav-item.polaroid .img {
-  top: 9px;
-  left: 11px;
+#flavor-nav .nav-item.clandestine-caramel {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -154px no-repeat;
 }
-#flavor-nav .nav-item.stamp {
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -128px no-repeat;
+#flavor-nav .nav-item.roman-holiday {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -298px no-repeat;
 }
-#flavor-nav .nav-item.stamp .img {
-  top: 13px;
-  left: 13px;
+#flavor-nav .nav-item.saigon-sunrise {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -442px no-repeat;
 }
-#flavor-nav .nav-item.london-kettle .img {
-  height: 82px;
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -258px no-repeat;
+#flavor-nav .nav-item.honalulu-aloha {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -586px no-repeat;
 }
-#flavor-nav .nav-item.clandestine-caramel .img {
-  height: 86px;
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -340px no-repeat;
+#flavor-nav .nav-item.southern-surprise {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -730px no-repeat;
 }
-#flavor-nav .nav-item.roman-holiday .img {
-  height: 82px;
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -426px no-repeat;
+#flavor-nav .nav-item.brazilian-samba {
+  background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -874px no-repeat;
 }
-#flavor-nav .nav-item.saigon-sunrise .img {
-  height: 82px;
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -508px no-repeat;
+#flavor-page {
+  margin-top: 25px;
+  /*z-index: 3;*/
+
+  position: relative;
+  min-height: 640px;
 }
-#flavor-nav .nav-item.honalulu-aloha .img {
-  height: 82px;
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -590px no-repeat;
+#flavor-page .ribbon {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  left: -10px;
+  width: 407px;
+  height: 100px;
 }
-#flavor-nav .nav-item.southern-surprise .img {
-  height: 82px;
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -672px no-repeat;
+#flavor-page .ribbon.london-kettle {
+  background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 0 no-repeat;
 }
-#flavor-nav .nav-item.brazilian-samba .img {
-  height: 82px;
-  background: url('img/flavor-pages/flavor-nav-sprite.png') 0 -754px no-repeat;
+#flavor-page .ribbon.clandestine-caramel {
+  background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -100px no-repeat;
+}
+#flavor-page .ribbon.roman-holiday {
+  background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -200px no-repeat;
+}
+#flavor-page .ribbon.saigon-sunrise {
+  background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -300px no-repeat;
+}
+#flavor-page .ribbon.honalulu-aloha {
+  background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -400px no-repeat;
+}
+#flavor-page .ribbon.southern-surprise {
+  background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -500px no-repeat;
+}
+#flavor-page .ribbon.brazilian-samba {
+  background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -600px no-repeat;
+}
+#flavor-page .background {
+  position: absolute;
+  z-index: 4;
+}
+#flavor-page .info-box {
+  -moz-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.8);
+  width: 285px ;
+  min-height: 394px;
+  background: #fff;
+  position: absolute;
+  top: 110px;
+  padding: 5px;
+  z-index: 6;
+}
+#flavor-page .info-box .inner {
+  border: 2px solid #b88d87;
+  height: 384px;
+  padding: 5px;
+  position: relative;
+}
+#flavor-page .info-box .inner .nutrition-info {
+  background: url('img/flavor-pages/nutrition-info.png') 0 0 no-repeat;
+  cursor: pointer;
+  /*width: 139px;*/
+
+  width: 305px;
+  height: 24px;
+  position: absolute;
+  bottom: 5px;
+}
+#flavor-page .info-box .inner .nutrition-info .nutrition-label {
+  display: none;
+  position: absolute;
+  left: 300px;
+  width: 230px;
+  height: 525px;
+  bottom: -80px;
+}
+#flavor-page.london-kettle .nutrition-label {
+  background: url('img/flavor-pages/nutrition/nutri_label_kettle.gif') 0 0 no-repeat;
+}
+#flavor-page.london-kettle .background {
+  background: url('img/flavor-pages/background/london-kettle.png') 0 0;
+  width: 642px;
+  height: 606px;
+  right: 0;
+}
+#flavor-page .place-order {
+  outline: 0;
+  display: block;
+  position: absolute;
+  width: 230px;
+  height: 97px;
+  bottom: 15px;
+  left: 30px;
+  background: url('img/flavor-pages/place-an-order.png') 0 0 no-repeat;
 }
 #the-footer {
   height: 133px;

@@ -17,5 +17,11 @@
 		// });
 		
 		sw.registerObject('home-carousel-flash', '9.0.0');
+
+		jq('body').on('mouseenter', '.nutrition-info', function (evt) {
+			jq('.nutrition-label', this).show();
+		}).on('mouseleave', '.nutrition-info', function (evt) {
+			jq('.nutrition-label', this).hide();
+		})
 	});
 }(window.jQuery, window.swfobject));
