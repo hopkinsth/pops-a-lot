@@ -86,6 +86,7 @@ body {
   margin-right: auto;
   background: url('img/header-sprite.png') 0 0 no-repeat;
   position: relative;
+  z-index: 10;
 }
 #header #the-logo {
   position: relative;
