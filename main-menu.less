@@ -28,7 +28,7 @@
 .main-menu ul {
 	position:		absolute;
 	top:			-999em;
-	width:			10em; /* left offset of submenus need to match (see below) */
+	width:			198px; /* left offset of submenus need to match (see below) */
 }
 .main-menu ul li {
 	width:			100%;
@@ -47,7 +47,7 @@
 .main-menu li:hover ul,
 .main-menu li.sfHover ul {
 	left:			0;
-	top:			50px; /* match top ul list item height */
+	top:			64px; /* match top ul list item height */
 	z-index:		99;
 }
 ul.main-menu li:hover li ul,
@@ -56,7 +56,7 @@ ul.main-menu li.sfHover li ul {
 }
 ul.main-menu li li:hover ul,
 ul.main-menu li li.sfHover ul {
-	left:			10em; /* match ul width */
+	left:			198px; /* match ul width */
 	position: absolute;
 	top:			0;
 
@@ -104,28 +104,35 @@ ul.main-menu li li li.sfHover ul {
 }
 
 .main-menu > li > a, .main-menu > li > a:visited {
-	text-shadow: 4px 4px 5px @textShadow;
-	height: 29px;
+	/*text-shadow: 4px 4px 5px @textShadow;
+	max-width: 120px;*/
+	line-height: 0.8;
+	height: 63px;
 	position: relative;
 	bottom: 1px;
+	color: transparent;
+	padding: 0;
 }
+
+
 .main-menu > li.separator {
 	@separatorBG: url('img/main-menu-separator.png') left top no-repeat;
 	background: @separatorBG;
 	height: 50px;
 	width: 8px;
 	margin-right: -4px;
-
+	position: relative;
+	top: 6px;
 	&:hover {
 		background: @separatorBG;
 	}
 }
 .main-menu > li {
-	height: 50px;
+	height: 63px;
 	/*margin-right: 8px;*/
 }
 .main-menu > li:hover {
-	background: url('img/header-sprite.png') 0 -337px repeat;
+	background: url('img/header-sprite.png') 0 -351px repeat;
 }
 
 .main-menu > li:last-child > a {
@@ -135,13 +142,48 @@ ul.main-menu li li li.sfHover ul {
 @topLevelTopPadding: 9px;
 @topLevelBottomPadding: 9px;
 
-.main-menu.first > li > a {
+/*.main-menu.first > li > a {
 	padding: @topLevelTopPadding 16px @topLevelBottomPadding 16px;
 }
 .main-menu.second > li > a {
 	padding: @topLevelTopPadding 16px @topLevelBottomPadding 16px;
+}*/
+
+.main-menu > li.item1 > a {
+	background: url('img/header-sprite.png') 0 -551px;
+	width: 117px;
+	
 }
 
+.main-menu > li.item2 > a {
+	background: url('img/header-sprite.png') -123px -551px;
+	width: 132px;
+	
+}
+
+.main-menu > li.item3 > a {
+	background: url('img/header-sprite.png') -270px -551px;
+	width: 100px;
+
+}
+
+.main-menu > li.item4 > a {
+	background: url('img/header-sprite.png') -372px -551px;
+	width: 120px;
+	
+}
+
+.main-menu > li.item5 > a {
+	background: url('img/header-sprite.png') -508px -551px;
+	width: 108px;
+	
+}
+
+.main-menu > li.item6 > a {
+	background: url('img/header-sprite.png') -640px -551px;
+	width: 114px;
+	
+}
 
 
 .main-menu li {
@@ -153,6 +195,14 @@ ul.main-menu li li li.sfHover ul {
 	@sideBorders: 1px solid #d28329;
 	border-right: @sideBorders;
 	border-left: @sideBorders;
+
+	&.has-children > a {
+		background: url('img/menu-slices/submenu-arrow-right.png') center right no-repeat;
+	}
+
+	&.has-children:hover > a {
+		background: url('img/menu-slices/submenu-arrow-down.png') center right no-repeat;
+	}
 }
 
 .main-menu li li:hover {
@@ -170,7 +220,9 @@ ul.main-menu li li li.sfHover ul {
 
 .main-menu > li > ul > li ul {
 	.shadow(7px, 6px, 30px, 0px, #000);
+
 }
+
 
 
 .main-menu.first {

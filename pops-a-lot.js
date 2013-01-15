@@ -1,8 +1,13 @@
 (function (jq, sw) {
 	jq(function () {
+		var topLevelListItems = jq('.main-menu > li');
 		//adds the separator elements to the menu, which, unfortunately,
 		//need to be separate elements
-		jq('#the-menu .main-menu > li').not(':last-child').after('<li class="separator"/>');
+
+		topLevelListItems.each(function () {
+			//adds item<num> classes to the top-level items
+			jq(this).addClass( 'item' + ( topLevelListItems.index(this) + 1 ) );
+		}).not(':last-child').after('<li class="separator"/>');
 
 		jq('.main-menu li').addClass(function () {
 			//if the element has sub ul elements, 
@@ -11,6 +16,7 @@
 				return 'has-children';
 			} 
 		});
+
 
 		// jq('.main-menu').superfish({
 		// 	autoArrows: false

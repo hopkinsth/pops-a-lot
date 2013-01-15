@@ -103,7 +103,7 @@ body {
 #header #the-menu {
   position: absolute;
   bottom: 57px;
-  height: 50px;
+  height: 64px;
   width: 960px;
   /*
  * main-menu.less: all the top menu CSS;
@@ -112,6 +112,13 @@ body {
   /*** ESSENTIAL STYLES ***/
 
   /*** DEMO SKIN ***/
+
+  /*.main-menu.first > li > a {
+	padding: @topLevelTopPadding 16px @topLevelBottomPadding 16px;
+}
+.main-menu.second > li > a {
+	padding: @topLevelTopPadding 16px @topLevelBottomPadding 16px;
+}*/
 
   /**
  * end main-menu.less
@@ -139,7 +146,7 @@ body {
 #header #the-menu .main-menu ul {
   position: absolute;
   top: -999em;
-  width: 10em;
+  width: 198px;
   /* left offset of submenus need to match (see below) */
 
 }
@@ -162,7 +169,7 @@ body {
 #header #the-menu .main-menu li:hover ul,
 #header #the-menu .main-menu li.sfHover ul {
   left: 0;
-  top: 50px;
+  top: 64px;
   /* match top ul list item height */
 
   z-index: 99;
@@ -173,7 +180,7 @@ body {
 }
 #header #the-menu ul.main-menu li li:hover ul,
 #header #the-menu ul.main-menu li li.sfHover ul {
-  left: 10em;
+  left: 198px;
   /* match ul width */
 
   position: absolute;
@@ -221,42 +228,73 @@ body {
 }
 #header #the-menu .main-menu > li > a,
 #header #the-menu .main-menu > li > a:visited {
-  text-shadow: 4px 4px 5px #231f20;
-  height: 29px;
+  /*text-shadow: 4px 4px 5px @textShadow;
+	max-width: 120px;*/
+
+  line-height: 0.8;
+  height: 63px;
   position: relative;
   bottom: 1px;
+  color: transparent;
+  padding: 0;
 }
 #header #the-menu .main-menu > li.separator {
   background: url('img/main-menu-separator.png') left top no-repeat;
   height: 50px;
   width: 8px;
   margin-right: -4px;
+  position: relative;
+  top: 6px;
 }
 #header #the-menu .main-menu > li.separator:hover {
   background: url('img/main-menu-separator.png') left top no-repeat;
 }
 #header #the-menu .main-menu > li {
-  height: 50px;
+  height: 63px;
   /*margin-right: 8px;*/
 
 }
 #header #the-menu .main-menu > li:hover {
-  background: url('img/header-sprite.png') 0 -337px repeat;
+  background: url('img/header-sprite.png') 0 -351px repeat;
 }
 #header #the-menu .main-menu > li:last-child > a {
   background: none;
 }
-#header #the-menu .main-menu.first > li > a {
-  padding: 9px 16px 9px 16px;
+#header #the-menu .main-menu > li.item1 > a {
+  background: url('img/header-sprite.png') 0 -551px;
+  width: 117px;
 }
-#header #the-menu .main-menu.second > li > a {
-  padding: 9px 16px 9px 16px;
+#header #the-menu .main-menu > li.item2 > a {
+  background: url('img/header-sprite.png') -123px -551px;
+  width: 132px;
+}
+#header #the-menu .main-menu > li.item3 > a {
+  background: url('img/header-sprite.png') -270px -551px;
+  width: 100px;
+}
+#header #the-menu .main-menu > li.item4 > a {
+  background: url('img/header-sprite.png') -372px -551px;
+  width: 120px;
+}
+#header #the-menu .main-menu > li.item5 > a {
+  background: url('img/header-sprite.png') -508px -551px;
+  width: 108px;
+}
+#header #the-menu .main-menu > li.item6 > a {
+  background: url('img/header-sprite.png') -640px -551px;
+  width: 114px;
 }
 #header #the-menu .main-menu li li {
   background: #771f15;
   border-bottom: 1px solid #d28329;
   border-right: 1px solid #d28329;
   border-left: 1px solid #d28329;
+}
+#header #the-menu .main-menu li li.has-children > a {
+  background: url('img/menu-slices/submenu-arrow-right.png') center right no-repeat;
+}
+#header #the-menu .main-menu li li.has-children:hover > a {
+  background: url('img/menu-slices/submenu-arrow-down.png') center right no-repeat;
 }
 #header #the-menu .main-menu li li:hover {
   background: #611911;
@@ -284,7 +322,7 @@ body {
 #header #the-menu-bg {
   position: absolute;
   bottom: 57px;
-  height: 50px;
+  height: 64px;
   width: 960px;
   background: url('img/header-sprite.png') 0 -287px no-repeat;
   z-index: 4;
