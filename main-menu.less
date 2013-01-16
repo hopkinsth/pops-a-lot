@@ -47,7 +47,7 @@
 .main-menu li:hover ul,
 .main-menu li.sfHover ul {
 	left:			0;
-	top:			64px; /* match top ul list item height */
+	top:			63px; /* match top ul list item height */
 	z-index:		99;
 }
 ul.main-menu li:hover li ul,
@@ -58,7 +58,7 @@ ul.main-menu li li:hover ul,
 ul.main-menu li li.sfHover ul {
 	left:			198px; /* match ul width */
 	position: absolute;
-	top:			0;
+	top:			-1px;
 
 	li:last-child {
 		/*border-bottom: 0;*/
@@ -128,7 +128,7 @@ ul.main-menu li li li.sfHover ul {
 	}
 }
 .main-menu > li {
-	height: 63px;
+	height: 64px;
 	/*margin-right: 8px;*/
 }
 .main-menu > li:hover {
@@ -163,13 +163,13 @@ ul.main-menu li li li.sfHover ul {
 
 .main-menu > li.item3 > a {
 	background: url('img/header-sprite.png') -270px -551px;
-	width: 100px;
+	width: 92px;
 
 }
 
 .main-menu > li.item4 > a {
 	background: url('img/header-sprite.png') -372px -551px;
-	width: 120px;
+	width: 114px;
 	
 }
 
@@ -219,7 +219,7 @@ ul.main-menu li li li.sfHover ul {
 }
 
 .main-menu > li > ul > li ul {
-	.shadow(7px, 6px, 30px, 0px, #000);
+	.shadow(15px, 6px, 60px, -8px, #000);
 
 }
 

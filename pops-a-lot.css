@@ -98,7 +98,7 @@ body {
   display: block;
   outline: none;
   background: url('img/header-sprite.png') 0 -164px no-repeat;
-  z-index: 6;
+  z-index: 5;
 }
 #header #the-menu {
   position: absolute;
@@ -123,7 +123,7 @@ body {
   /**
  * end main-menu.less
  */
-  z-index: 5;
+  z-index: 6;
 }
 #header #the-menu .main-menu,
 #header #the-menu .main-menu * {
@@ -169,7 +169,7 @@ body {
 #header #the-menu .main-menu li:hover ul,
 #header #the-menu .main-menu li.sfHover ul {
   left: 0;
-  top: 64px;
+  top: 63px;
   /* match top ul list item height */
 
   z-index: 99;
@@ -184,7 +184,7 @@ body {
   /* match ul width */
 
   position: absolute;
-  top: 0;
+  top: -1px;
 }
 #header #the-menu ul.main-menu li li:hover ul li:last-child,
 #header #the-menu ul.main-menu li li.sfHover ul li:last-child {
@@ -250,7 +250,7 @@ body {
   background: url('img/main-menu-separator.png') left top no-repeat;
 }
 #header #the-menu .main-menu > li {
-  height: 63px;
+  height: 64px;
   /*margin-right: 8px;*/
 
 }
@@ -270,11 +270,11 @@ body {
 }
 #header #the-menu .main-menu > li.item3 > a {
   background: url('img/header-sprite.png') -270px -551px;
-  width: 100px;
+  width: 92px;
 }
 #header #the-menu .main-menu > li.item4 > a {
   background: url('img/header-sprite.png') -372px -551px;
-  width: 120px;
+  width: 114px;
 }
 #header #the-menu .main-menu > li.item5 > a {
   background: url('img/header-sprite.png') -508px -551px;
@@ -305,9 +305,9 @@ body {
   box-shadow: 0 6px 20px 0px #000000;
 }
 #header #the-menu .main-menu > li > ul > li ul {
-  -moz-box-shadow: 7px 6px 30px 0px #000000;
-  -webkit-box-shadow: 7px 6px 30px 0px #000000;
-  box-shadow: 7px 6px 30px 0px #000000;
+  -moz-box-shadow: 15px 6px 60px -8px #000000;
+  -webkit-box-shadow: 15px 6px 60px -8px #000000;
+  box-shadow: 15px 6px 60px -8px #000000;
 }
 #header #the-menu .main-menu.first {
   /*bottom: 50%;*/
