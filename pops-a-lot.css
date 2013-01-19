@@ -572,13 +572,13 @@ body {
 #flavor-nav .nav-item.saigon-sunrise {
   background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -442px no-repeat;
 }
-#flavor-nav .nav-item.honalulu-aloha {
+#flavor-nav .nav-item.brazilian-samba {
   background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -586px no-repeat;
 }
 #flavor-nav .nav-item.southern-surprise {
   background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -730px no-repeat;
 }
-#flavor-nav .nav-item.brazilian-samba {
+#flavor-nav .nav-item.honolulu-aloha {
   background: url('img/flavor-pages/flavor-nav-sprite.png') -10px -874px no-repeat;
 }
 #flavor-page {
@@ -608,7 +608,7 @@ body {
 #flavor-page .ribbon.saigon-sunrise {
   background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -300px no-repeat;
 }
-#flavor-page .ribbon.honalulu-aloha {
+#flavor-page .ribbon.honolulu-aloha {
   background: url('img/flavor-pages/flavor-ribbon-sprite.png') 0 -400px no-repeat;
 }
 #flavor-page .ribbon.southern-surprise {
@@ -698,11 +698,11 @@ body {
   height: 618px;
   right: 0;
 }
-#flavor-page.honalulu-aloha .nutrition-label {
-  background: url('img/flavor-pages/nutrition/honalulu.gif') 0 0 no-repeat;
+#flavor-page.honolulu-aloha .nutrition-label {
+  background: url('img/flavor-pages/nutrition/honolulu.gif') 0 0 no-repeat;
 }
-#flavor-page.honalulu-aloha .background {
-  background: url('img/flavor-pages/background/honalulu-aloha.png') 0 0;
+#flavor-page.honolulu-aloha .background {
+  background: url('img/flavor-pages/background/honolulu-aloha.png') 0 0;
   width: 683px;
   height: 620px;
   right: 0;
