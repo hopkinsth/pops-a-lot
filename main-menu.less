@@ -56,7 +56,7 @@ ul.main-menu li.sfHover li ul {
 }
 ul.main-menu li li:hover ul,
 ul.main-menu li li.sfHover ul {
-	left:			198px; /* match ul width */
+	left:			207px; /* match ul width */
 	position: absolute;
 	top:			-1px;
 
@@ -78,7 +78,7 @@ ul.main-menu li li.sfHover li ul {
 }
 ul.main-menu li li li:hover ul,
 ul.main-menu li li li.sfHover ul {
-	left:			10em; /* match ul width */
+	left:			207px; /* match ul width */
 	top:			0;
 }
 
@@ -107,7 +107,7 @@ ul.main-menu li li li.sfHover ul {
 	/*text-shadow: 4px 4px 5px @textShadow;
 	max-width: 120px;*/
 	line-height: 0.8;
-	height: 63px;
+	height: 62px;
 	position: relative;
 	bottom: 1px;
 	color: transparent;
@@ -128,7 +128,7 @@ ul.main-menu li li li.sfHover ul {
 	}
 }
 .main-menu > li {
-	height: 64px;
+	height: 62px;
 	/*margin-right: 8px;*/
 }
 .main-menu > li:hover {
@@ -196,12 +196,23 @@ ul.main-menu li li li.sfHover ul {
 	border-right: @sideBorders;
 	border-left: @sideBorders;
 
+	padding: 6px 9px 6px inherit;
+
+	/*max-height: 49px;
+	line-height: 0.7;*/
+
+	& a {
+		/*width: 165px;*/
+		position: relative;
+		bottom: 1px;
+	}
+
 	&.has-children > a {
-		background: url('img/menu-slices/submenu-arrow-right.png') center right no-repeat;
+		background: url('img/menu-slices/submenu-arrow-right.png') 179px 16px no-repeat;
 	}
 
 	&.has-children:hover > a {
-		background: url('img/menu-slices/submenu-arrow-down.png') center right no-repeat;
+		background: url('img/menu-slices/submenu-arrow-down.png') 179px 16px no-repeat;
 	}
 }
 
@@ -216,6 +227,12 @@ ul.main-menu li li li.sfHover ul {
 .main-menu li li li {
 	// border-left: 0;
 	// border-right: 0;
+	padding: 0 inherit;
+	a, a:visited {
+		padding: 0 5px;
+		position: relative;
+		bottom: 2px;
+	}
 }
 
 .main-menu > li > ul > li ul {
@@ -241,4 +258,4 @@ ul.main-menu li li li.sfHover ul {
 }
 /**
  * end main-menu.less
- */
+*/
