@@ -146,6 +146,21 @@ body {
 		z-index: 4;
 		position: relative;
 
+		&.image {
+			padding: 0;
+			width: 300px;
+			background: transparent;
+			height: 300px;
+
+			img {
+				margin:0;
+				padding:0;
+				border:0;
+				outline:0;
+				display:block;
+			}
+		}
+
 		/**
 		 * Maybe we'll set this with jQuery?
 		 */
@@ -222,6 +237,12 @@ body {
 			height: ( 300px - (@topPadding * 2) );
 		}
 	}
+}
+
+#content_area {
+	background: #fff;
+	min-height: 900px;
+	margin-bottom: 20px;
 }
 
 #tmp-filler-area {
@@ -404,6 +425,12 @@ body {
 			height: 384px;
 			padding: 5px;
 			position: relative;
+
+			.text-container {
+				overflow: scroll;
+				height: 350px;
+			}
+
 			.nutrition-info {
 				background: url('img/flavor-pages/nutrition-info.png') 0 0 no-repeat;
 				cursor: pointer;
@@ -427,7 +454,7 @@ body {
 
 	&.london-kettle {
 		.nutrition-label {
-			background: url('img/flavor-pages/nutrition/nutri_label_kettle.gif') 0 0 no-repeat;
+			background: url('img/flavor-pages/nutrition/london.gif') 0 0 no-repeat;
 		}
 
 		.background {
@@ -668,3 +695,4 @@ body {
 		}
 	}
 }
+
