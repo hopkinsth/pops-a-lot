@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<groups>		
+		<group snapToCell="true" gridPosition="BC" cellPosition="BC" orientation="horizontal" spacing="390" paddingH="0" paddingV="-20">
+			<holdButton out="assets/skins/skin1/prev.png" over="assets/skins/skin1/prevOver.png" down="assets/skins/skin1/prevOver.png" action="prev" tooltip="" animate="true"/>
+			<holdButton out="assets/skins/skin1/next.png" over="assets/skins/skin1/nextOver.png" down="assets/skins/skin1/nextOver.png" action="next" tooltip="" animate="true"/>	
+		</group>	
+	</groups>
+</data>
